@@ -9,9 +9,9 @@ export default function Home() {
     <div className="center-content">
       <div className="page-content">
         <h1>
-          P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
-        </h1>
-        <div>Your colleagues won&apos;t know what hit them.</div>
+    <Clock8 className="logo" strokeWidth={2.75} />Pocket Heist
+  </h1>
+    <div>Missions. Mayhem. Mondays sorted.</div>
         <p className="intro">
           Welcome to Pocket Heist — the only task manager that makes stealing
           the last coffee pod feel like a carefully orchestrated operation.

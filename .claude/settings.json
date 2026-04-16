@@ -3,7 +3,8 @@
     "allow": [
       "WebSearch",
       "Bash(git init)",
-      "Bash(git switch:*)"
+      "Bash(git switch:*)",
+      "Bash(git add .)"
     ]
   },
   "hooks": {
@@ -13,8 +14,16 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"hello\"",
-            "statusMessage": "Logging custom hook use..."
+            "command": "echo \"hello\""
+          },
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{require('fs').writeFileSync('tool-use.json',JSON.stringify(JSON.parse(d),null,2))})\""
+          }
+          ,
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const fp=(j.tool_input||{}).file_path||'';if(/\\.tsx?$/.test(fp)){const {spawnSync}=require('child_process');spawnSync('npx',['prettier','--write',fp],{stdio:'inherit'});}})\" 2>/dev/null || true"
           }
         ]
       }

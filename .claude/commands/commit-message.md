@@ -5,6 +5,7 @@ allowed-tools: Bash(git status:*), Bash(git diff --staged), Bash(git commit:*)
 
 ## Context:
 
+- Add git files: !`git add .`
 - Current git status: !`git status`
 - Current git diff: !`git diff --staged`
 

@@ -1,0 +1,42 @@
+{
+  "session_id": "d8d328cf-050f-42e9-958e-26184495ef69",
+  "transcript_path": "C:\\Users\\syed-umer.ahmed\\.claude\\projects\\C--ImportantDownloads-codeprojects-pocket-heist-pocket-heist\\d8d328cf-050f-42e9-958e-26184495ef69.jsonl",
+  "cwd": "C:\\ImportantDownloads\\codeprojects\\pocket-heist\\pocket-heist",
+  "permission_mode": "default",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Edit",
+  "tool_input": {
+    "file_path": "C:\\ImportantDownloads\\codeprojects\\pocket-heist\\pocket-heist\\.claude\\settings.json",
+    "old_string": "    \"allow\": [\n      \"WebSearch\",\n      \"Bash(git init)\",\n      \"Bash(git switch:*)\"\n    ]",
+    "new_string": "    \"allow\": [\n      \"WebSearch\",\n      \"Bash(git init)\",\n      \"Bash(git switch:*)\",\n      \"Bash(git add .)\"\n    ]",
+    "replace_all": false
+  },
+  "tool_response": {
+    "filePath": "C:\\ImportantDownloads\\codeprojects\\pocket-heist\\pocket-heist\\.claude\\settings.json",
+    "oldString": "    \"allow\": [\n      \"WebSearch\",\n      \"Bash(git init)\",\n      \"Bash(git switch:*)\"\n    ]",
+    "newString": "    \"allow\": [\n      \"WebSearch\",\n      \"Bash(git init)\",\n      \"Bash(git switch:*)\",\n      \"Bash(git add .)\"\n    ]",
+    "originalFile": "{\n  \"permissions\": {\n    \"allow\": [\n      \"WebSearch\",\n      \"Bash(git init)\",\n      \"Bash(git switch:*)\"\n    ]\n  },\n  \"hooks\": {\n    \"PostToolUse\": [\n      {\n        \"matcher\": \"Write|Edit\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"echo \\\"hello\\\"\"\n          },\n          {\n            \"type\": \"command\",\n            \"command\": \"node -e \\\"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{require('fs').writeFileSync('tool-use.json',JSON.stringify(JSON.parse(d),null,2))})\\\"\"\n          }\n          ,\n          {\n            \"type\": \"command\",\n            \"command\": \"node -e \\\"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const fp=(j.tool_input||{}).file_path||'';if(/\\\\.tsx?$/.test(fp)){const {spawnSync}=require('child_process');spawnSync('npx',['prettier','--write',fp],{stdio:'inherit'});}})\\\" 2>/dev/null || true\"\n          }\n        ]\n      }\n    ]\n  }\n}\n",
+    "structuredPatch": [
+      {
+        "oldStart": 3,
+        "oldLines": 7,
+        "newStart": 3,
+        "newLines": 8,
+        "lines": [
+          "     \"allow\": [",
+          "       \"WebSearch\",",
+          "       \"Bash(git init)\",",
+          "-      \"Bash(git switch:*)\"",
+          "+      \"Bash(git switch:*)\",",
+          "+      \"Bash(git add .)\"",
+          "     ]",
+          "   },",
+          "   \"hooks\": {"
+        ]
+      }
+    ],
+    "userModified": false,
+    "replaceAll": false
+  },
+  "tool_use_id": "toolu_01FHHU8iUqK4QC5HvXbAFtMC"
+}

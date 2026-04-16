@@ -11,7 +11,7 @@ export default function Home() {
         <h1>
           P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
         </h1>
-        <div>Tiny missions. Big office mischief.</div>
+        <div>Your colleagues won&apos;t know what hit them.</div>
         <p className="intro">
           Welcome to Pocket Heist — the only task manager that makes stealing
           the last coffee pod feel like a carefully orchestrated operation.

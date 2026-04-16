@@ -64,3 +64,4 @@ Update `app/(public)/preview/page.tsx` with a labeled section showing the compon
 
 - Keep test minimal.
 - Only proceed when current test passes.
+  9

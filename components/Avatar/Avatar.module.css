@@ -1,0 +1,8 @@
+@reference "../../app/globals.css";
+
+.avatar {
+  @apply rounded-full bg-primary text-dark font-bold flex items-center justify-center shrink-0;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+}

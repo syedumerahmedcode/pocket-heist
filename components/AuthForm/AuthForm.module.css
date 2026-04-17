@@ -1,0 +1,29 @@
+@reference "../../app/globals.css";
+
+.form {
+  @apply flex flex-col gap-4 mt-4;
+}
+
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.input {
+  @apply w-full px-3 py-2 rounded-md bg-light text-heading border border-lighter focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.passwordWrapper {
+  @apply relative;
+}
+
+.toggle {
+  @apply absolute right-2 top-1/2 -translate-y-1/2 bg-transparent border-none cursor-pointer text-body;
+}
+
+.switchLink {
+  @apply text-center text-sm;
+}
+
+.switchLink a {
+  @apply text-primary hover:text-secondary;
+}
